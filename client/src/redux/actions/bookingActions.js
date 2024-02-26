@@ -5,7 +5,7 @@ export const bookCar = (reqObj) =>async dispatch =>{
     dispatch({type: 'LOADING',payload:true})
 
     try{
-        await axios.post("/api/bookings/bookcar", reqObj)
+        await axios.post("https://carrental-2-mk1u.onrender.com/api/bookings/bookcar", reqObj)
         dispatch({type: 'LOADING',payload:false})
         setTimeout(()=>{
             message.success('your car booked successfully')
@@ -22,7 +22,7 @@ export const getAllBookings = ()=>async dispatch=>{
     dispatch({type: 'LOADING',payload:true})
 
     try{
-        const response = await axios.get("/api/bookings/getallbookings")
+        const response = await axios.get("https://carrental-2-mk1u.onrender.com/api/bookings/getallbookings")
         dispatch({type: 'GET_ALL_BOOKINGS',payload:response.data})
         dispatch({type: 'LOADING',payload:false})
     }catch(error){
