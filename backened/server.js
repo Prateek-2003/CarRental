@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.json())
 
-app.use("/api/cars/" , require("./routes/carsRoute"))
+app.use("https://carrental-x7uq.onrender.com/api/cars/" , require("./routes/carsRoute"))
 app.use("/api/users/" , require("./routes/usersRoute"))
 app.use("/api/bookings/" , require("./routes/bookingsRoute"))
 
